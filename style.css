@@ -1,0 +1,181 @@
+/* Estilos globales */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  margin: 0;
+  padding: 0;
+  color: white;
+  position: relative;
+  z-index: 0;
+}
+
+/* 🔹 Overlay para mejorar contraste */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.25);
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+#contrastToggle {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Controles principales */
+.controls {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button#start {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+button#start:hover {
+  background: #0056b3;
+}
+
+.mic-indicator {
+  width: 12px;
+  height: 12px;
+  background: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.mic-active .mic-indicator {
+  opacity: 1;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+#entradaTexto {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 250px;
+}
+
+/* Texto reconocido con glow */
+#texto {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 15px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.7);
+  transition: all 0.3s;
+}
+
+.glow {
+  color: #ffeb3b;
+  text-shadow: 0 0 20px #ffeb3b, 0 0 30px #ff9800;
+}
+
+/* Video */
+.video-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#videoSeña {
+  max-width: 100%;   /* 🔹 Ahora es responsive */
+  height: auto;      /* 🔹 Mantiene proporción */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.video-speed {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Info secciones */
+#infoProyecto, #infoCultural {
+  background: rgba(0,0,0,0.5);
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  line-height: 1.6;
+}
+
+h2 {
+  color: #ffeb3b;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.7);
+  font-size: 0.9rem;
+}
+
+/* Modo alto contraste */
+.high-contrast {
+  background: black !important;
+  color: yellow !important;
+}
+
+.high-contrast h1, 
+.high-contrast h2, 
+.high-contrast p, 
+.high-contrast li {
+  color: yellow !important;
+}
+
+/* 🔹 Responsive ajustes */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .controls {
+    flex-direction: column;
+  }
+  #entradaTexto {
+    width: 100%;
+    max-width: 300px;
+  }
+  #infoProyecto, #infoCultural {
+    margin: 15px;
+    padding: 15px;
+  }
+}

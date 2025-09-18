@@ -307,7 +307,7 @@ const palabrasFijas = {
   "neuquen": "Neuquén",
   "neuquén": "Neuquén",
   "patagonia": "Patagonia",
-  "rio negro": "Rio Negro",
+  "rio negro": "Rionegro",
   "salta": "Salta",
   "san juan": "San Juan",
   "san luis": "San Luis",
@@ -653,4 +653,5 @@ if (contrastToggle) {
     document.body.classList.toggle("high-contrast");
   });
 }
+
 

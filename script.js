@@ -173,7 +173,7 @@ mergeFormas(conjugaciones['decir'], [
 // Estar (irregular auxiliar)
 conjugaciones['estar'] = [];
 mergeFormas(conjugaciones['estar'], [
-  'estar','estoy','estás','está','estamos','están',
+  'estar','estoy','está','estamos','están',
   'estuve','estuviste','estuvo','estuvimos','estuvieron',
   'estaba','estabas','estábamos','estaban',
   'estaré','estarás','estará','estaremos','estarán',
@@ -653,3 +653,4 @@ if (contrastToggle) {
     document.body.classList.toggle("high-contrast");
   });
 }
+

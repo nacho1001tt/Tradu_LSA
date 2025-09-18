@@ -311,7 +311,7 @@ const palabrasFijas = {
   "salta": "Salta",
   "san juan": "San Juan",
   "san luis": "San Luis",
-  "santa cruz": "Santa Cruz",
+  "santa cruz": "Santa_Cruz",
   "santa fe": "Santa Fe",
   "santiago del estero": "Santiago Del Estero",
   "tucuman": "Tucumán",
@@ -653,5 +653,6 @@ if (contrastToggle) {
     document.body.classList.toggle("high-contrast");
   });
 }
+
 
 
